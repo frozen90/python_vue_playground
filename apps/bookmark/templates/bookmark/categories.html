@@ -1,10 +1,11 @@
 {% extends 'core/base.html' %}
 {% block content %}
+
 <div class="container">
   <h1 class="title">Categories</h1>
   <div class="columns">
     {% for category in categories %}
-    <div class="column is-3">
+    <div class="column is-3 ">
       <div class="card card-link">
         <div class="card-content">
           <div class="media">
@@ -24,5 +25,7 @@
     </div>
   </div>
   {% endfor %}
+
 </div>
+
 {% endblock %}

@@ -1,10 +1,26 @@
 {% extends 'core/base.html' %}
 {% block content %}
-<div class="container">
-  <h1 class="title">{{ category.title }}</h1>
+<div class="container" id="delete-category">
+
+  <h1 class="title">{{ category.title }} [[ message ]]</h1>
 
   {{ category.description }}
 
   <p>List Links here...</p>
 </div>
+{% endblock %}
+{% block scripts %}
+
+
+<script>
+new Vue({
+  el: '#delete-category',
+  delimiters: ['[[', ']]'],
+  data () {
+    return {
+      message: 'Test'
+    }
+  }
+})
+</script>
 {% endblock %}
